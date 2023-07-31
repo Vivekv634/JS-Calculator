@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgb(177, 238, 213);
+    background: -moz-linear-gradient(48deg, rgba(177, 238, 213, 1) 0%, rgba(9, 138, 255, 1) 100%);
+    background: -webkit-linear-gradient(48deg, rgba(177, 238, 213, 1) 0%, rgba(9, 138, 255, 1) 100%);
+    background: linear-gradient(48deg, rgba(177, 238, 213, 1) 0%, rgba(9, 138, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b1eed5", endColorstr="#098aff", GradientType=1);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+/* conatiner and menu section CSS */
+.container {
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 550px;
+    justify-content: space-between;
+    background-color: #ffffff70;
+    padding: 1.2rem;
+    border-radius: 20px;
+    transition: all 150ms ease-out;
+    overflow: hidden;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme,
+.menu-icon {
+    cursor: pointer;
+}
+
+.dark-mode,
+.light-mode {
+    display: none;
+}
+
+.dark .container {
+    background-color: #00000070;
+}
+
+.dark .menu {
+    color: #ffffffe3;
+}
+
+
+/* screen and keys section CSS */
+.button-row {
+    margin-top: 0.5rem;
+}
+
+.key {
+    width: 58px;
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 50px 10px #00000020;
+    background: #ffffff90;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.key:hover {
+    background-color: #ffffff60;
+}
+
+.dark .key {
+    background: #00000080;
+    color: #ffffffe3;
+}
+
+#screen {
+    font-size: 3.5rem;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#screen::-webkit-scrollbar {
+    display: none;
+}
+
+.dark #screen {
+    color: #ffffffe3;
+}
+
+#ansDisplay {
+    border: none;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: transparent;
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #000000b1;
+}
+
+#ansDisplay::-webkit-scrollbar {
+    display: none;
+}
+
+.dark #ansDisplay {
+    color: #ffffffb1;
+}
+
+#equal {
+    background-color: rgba(127, 127, 241, 0.60);
+}
+
+.dark #equal {
+    background-color: rgba(127, 127, 241, 0.701);
+}
+
+#equal:hover {
+    background-color: rgba(127, 127, 241, 0.40);
+}
+
+.dark #equal:hover {
+    background-color: rgba(127, 127, 241, 0.915);
+}
+
+/* sidebar CSS */
+.menu_list {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    padding: inherit;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: -100%;
+    border-radius: inherit;
+    transition: all 250ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-clicked {
+    left: 0;
+}
+
+.menu-content {
+    margin: 90% auto;
+}
+
+.greeting {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .greeting {
+    color: #ffffffe3;
+}
+
+.menu-closeBtn {
+    display: flex;
+    justify-content: end;
+}
+
+.dark .menu-closeBtn {
+    color: #ffffffe3;
+}
+
+.dark .youtubeLink {
+    color: #ffffffe3;
+}
+
+
+/* adding mediaquery breakpoints */
+@media screen and (max-width:450px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .key {
+        width: calc(100%/4.4);
+        height: 66px;
+    }
+
+    .greeting {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .key {
+        width: 53px;
+        height: 50px;
+    }
+
+    .greeting {
+        font-size: 1.3rem;
+    }
+}

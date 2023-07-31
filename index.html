@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="theme">
+                <div onclick="changeTheme()" class="darkBtn"><i class="material-symbols-outlined">dark_mode</i></div>
+                <div onclick="changeTheme()" class="lightBtn light-mode"><i class="material-symbols-outlined">light_mode</i></div>
+            </div>
+            <div>
+                <i class="menu-icon material-symbols-outlined">menu</i>
+            </div>
+        </div>
+        <div class="calculator">
+            <div>
+                <div id="ansDisplay"></div>
+                <div type="text" id="screen"></div>
+            </div>
+            <div class="button-row">
+                <input class="key" type="button" value="AC" onclick="clearAll()">
+                <input class="key" type="button" value="DEL" onclick="backspace()">
+                <input class="key" type="button" value="CPY" onclick="copyResult()">
+                <input class="key" type="button" value="/" onclick="display('/')">
+            </div>
+            <div class="button-row">
+                <input class="key" type="button" value="7" onclick="display('7')">
+                <input class="key" type="button" value="8" onclick="display('8')">
+                <input class="key" type="button" value="9" onclick="display('9')">
+                <input class="key" type="button" value="*" onclick="display('*')">
+            </div>
+            <div class="button-row">
+                <input class="key" type="button" value="4" onclick="display('4')">
+                <input class="key" type="button" value="5" onclick="display('5')">
+                <input class="key" type="button" value="6" onclick="display('6')">
+                <input class="key" type="button" value="-" onclick="display('-')">
+            </div>
+            <div class="button-row">
+                <input class="key" type="button" value="1" onclick="display('1')">
+                <input class="key" type="button" value="2" onclick="display('2')">
+                <input class="key" type="button" value="3" onclick="display('3')">
+                <input class="key" type="button" value="+" onclick="display('+')">
+            </div>
+            <div class="button-row">
+                <input class="key" type="button" value="00" onclick="display('00')">
+                <input class="key" type="button" value="0" onclick="display('0')">
+                <input class="key" type="button" value="." onclick="display('.')">
+                <input class="key" type="button" value="=" onclick="solve()" id="equal">
+            </div>
+        </div>
+        <div class="menu_list">
+            <div class="menu-closeBtn">
+                <i class="closeBtn material-symbols-outlined">close</i>
+            </div>
+            <div class="menu-content">
+                <div class="greeting">Made With ❤️ By</div>
+                <div class="greeting"><a class="youtubeLink" target="_blank" href="https://www.youtube.com/channel/UCnn4Jf-xVWlGCCreItnm4sA">Monkey Coder</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
