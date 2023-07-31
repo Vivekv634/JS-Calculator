@@ -93,6 +93,11 @@ body {
     color: #ffffffe3;
 }
 
+.dark .key:hover {
+    background: #00000040;
+    color: #ffffffe3;
+}
+
 #screen {
     font-size: 3.5rem;
     border: none;
