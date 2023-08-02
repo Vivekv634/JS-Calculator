@@ -24,31 +24,31 @@ menu_close.onclick = () => {
 }
 
 function display(value) {
-    document.getElementById("screen").textContent += value;
+    screen.textContent += value;
     saveData();
 }
 
 function solve() {
-    var expression = document.getElementById("screen").textContent;
+    var expression = screen.textContent;
     var result = eval(expression);
-    document.getElementById("ansDisplay").textContent = result;
+    ansDisplay.textContent = result;
     saveData();
 }
 
 function clearAll() {
-    document.getElementById('screen').textContent = '';
-    document.getElementById('ansDisplay').textContent = '';
+    screen.textContent = '';
+    ansDisplay.textContent = '';
     saveData();
 }
 
 function backspace() {
-    var expression = document.getElementById("screen").textContent;
-    document.getElementById("screen").textContent = expression.slice(0, expression.length - 1);
+    var expression = screen.textContent;
+    screen.textContent = expression.slice(0, expression.length - 1);
     saveData();
 }
 
 function copyResult() {
-    var result = document.getElementById("ansDisplay");
+    var result = ansDisplay;
     if (result.textContent != "") {
         navigator.clipboard.writeText(result.textContent);
         alert(`Result copied to Clipboard : ${result.textContent}`);
