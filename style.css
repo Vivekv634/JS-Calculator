@@ -127,6 +127,7 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
     color: #000000b1;
+    height: 1.8rem;
 }
 
 #ansDisplay::-webkit-scrollbar {

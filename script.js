@@ -35,6 +35,14 @@ function solve() {
     saveData();
 }
 
+setInterval(solve, 100);
+
+function showResult() {
+    screen.textContent = ansDisplay.textContent;
+    ansDisplay.textContent = '';
+
+}
+
 function clearAll() {
     screen.textContent = '';
     ansDisplay.textContent = '';
